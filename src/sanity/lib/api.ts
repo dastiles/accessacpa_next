@@ -10,7 +10,6 @@ export const createLead = async ({
     contact,
     phone,
     deadline,
-    file,
 }: Lead) => {
   const mutation = {
     mutations: [
@@ -25,7 +24,6 @@ export const createLead = async ({
               contact,
               phone,
               deadline,
-                file,
         },
       },
     ],
