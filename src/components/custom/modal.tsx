@@ -13,6 +13,8 @@ import { Calendar } from "../ui/calendar";
 import { Loader } from "lucide-react";
 import { Button } from "../ui/button";
 import { createLead } from "@/sanity/lib/api";
+import { useRouter } from "next/navigation";
+import { sendMail } from "@/lib/resend";
 
 
 
@@ -25,6 +27,7 @@ const Modal = ({
   issue: string;
 }) => {
   const [step, setStep] = useState(0);
+  const router = useRouter();
   
   const [contactType, setContactType] = useState("");
   const [loading, setLoading] = useState(false);
@@ -138,7 +141,19 @@ const Modal = ({
 
       const leadData =  await createLead(lead);
        
-        console.log(leadData);
+        if (leadData) {
+          console.log(leadData);
+           await sendMail(lead)
+          toast.success("Lead created successfully");
+          setOpen(false);
+          setStep(0);
+          setLoading(false);
+          router.push('/success');
+         
+        } else {
+          toast.error("Something went wrong");
+          setLoading(false);
+        } 
         
  
       }
