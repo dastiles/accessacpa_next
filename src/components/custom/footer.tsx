@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
@@ -13,7 +13,9 @@ const Footer = () => {
               <h1 className="text-xl font-bold bg-gray-100">For Customers</h1>
               <ul className="flex-col flex gap-2 pt-8 text-gray-500 font-bold bg-gray-100">
                 {/* <li className="hover:underline">Find a Professional</li> */}
-                <li className="hover:underline"><Link href="/howitworks">How it works</Link></li>
+                <li className="hover:underline">
+                  <Link href="/howitworks">How it works</Link>
+                </li>
                 {/* <li className="hover:underline">Login</li> */}
               </ul>
             </div>
@@ -22,8 +24,12 @@ const Footer = () => {
                 For Professionals
               </h1>
               <ul className="flex-col flex gap-2 pt-8 text-gray-500 font-bold bg-gray-100">
-              <li className="hover:underline"><Link href="/projoin">Join as a Professional</Link></li>
-              <li className="hover:underline"><Link href="/howitworks">How it works</Link></li>
+                <li className="hover:underline">
+                  <Link href="/projoin">Join as a Professional</Link>
+                </li>
+                <li className="hover:underline">
+                  <Link href="/howitworks">How it works</Link>
+                </li>
                 {/* <li className="hover:underline">Pricing</li>
                 <li className="hover:underline">Help Center</li>
                 <li className="hover:underline">Mobile App</li> */}
@@ -32,7 +38,9 @@ const Footer = () => {
             <div className="py-1">
               <h1 className="text-xl font-bold bg-gray-100">About</h1>
               <ul className="flex-col flex gap-2 pt-8 text-gray-500 font-bold bg-gray-100">
-                <li className="hover:underline"><Link href="/about">About</Link></li>
+                <li className="hover:underline">
+                  <Link href="/about">About</Link>
+                </li>
                 {/* <li className="hover:underline">Careers</li>
                 <li className="hover:underline">Affliates</li>
                 <li className="hover:underline">Blog</li> */}
@@ -53,8 +61,8 @@ const Footer = () => {
       </div>
       <div className="w-full flex pt-5 items-center justify-center px-16">
         <p>
-          © 2024 ACCESSACPA Global Limited. Terms & Conditions / Cookie policy /
-          Privacy policy
+          © 2025 ACCESSACPA . Terms & Conditions / Cookie policy / Privacy
+          policy
         </p>
       </div>
     </div>

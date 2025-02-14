@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Appbar from "@/components/custom/appbar";
 import Footer from "@/components/custom/footer";
@@ -9,20 +9,21 @@ export default function Home() {
   return (
     <>
       <main>
-        <Appbar/>
+        <Appbar />
         <div className="relative h-[95vh] bg-[rgba(0,0,0,0.4)]">
           <div className="absolute inset-0 w-full -z-50  h-full lg:block bg-[rgba(0,0,0,1)]">
             <Image
               src="/bg.jpg"
-              alt=""
+              alt="Accounting and tax consultation services"
               layout="fill"
               objectFit="cover"
               className="w-[100vw] h-full"
+              priority={false}
             />
           </div>
           <div>
             <h1 className="lg:text-[3rem] text-[2rem] text-center pt-10  pb-2 text-white  font-bold">
-              Get Help With All Your Accounting, Business and Tax Needs
+              Expert Accounting, Business & Tax Help - Find a CPA Today!
             </h1>
           </div>
 
@@ -38,27 +39,42 @@ export default function Home() {
                 <form className="w-full flex gap-1 items-center">
                   <div className="mt-7 w-full grid grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-5">
                     <Modal issue="accounting">
-                      <button className=" text-orange py-2 px-3 font-bold bg-white rounded flex-1">
+                      <button
+                        className=" text-orange py-2 px-3 font-bold bg-white rounded flex-1"
+                        aria-label="Learn more about Accounting services"
+                      >
                         <span className="">Accounting</span>
                       </button>
                     </Modal>
                     <Modal issue="business">
-                      <button className=" text-white py-2 px-3 font-bold bg-orange rounded flex-1">
+                      <button
+                        className=" text-white py-2 px-3 font-bold bg-orange rounded flex-1"
+                        aria-label="Learn more about Business services"
+                      >
                         <span className="">Business</span>
                       </button>
                     </Modal>
                     <Modal issue="tax">
-                      <button className=" text-white py-2 px-3 font-bold bg-blue-500 rounded flex-1">
+                      <button
+                        className=" text-white py-2 px-3 font-bold bg-blue-500 rounded flex-1"
+                        aria-label="Learn more about Tax services"
+                      >
                         <span className="">Tax</span>
                       </button>
                     </Modal>
                     <Modal issue="audit">
-                      <button className=" text-white py-2 px-3 font-bold bg-red-500 rounded flex-1">
+                      <button
+                        className=" text-white py-2 px-3 font-bold bg-red-500 rounded flex-1"
+                        aria-label="Learn more about Audit services"
+                      >
                         <span className="">Audit</span>
                       </button>
                     </Modal>
                     <Modal issue="information Technology">
-                      <button className=" text-white py-2 px-3 font-bold bg-yellow-300 rounded flex-1">
+                      <button
+                        className=" text-white py-2 px-3 font-bold bg-yellow-300 rounded flex-1"
+                        aria-label="Learn more about Information Technology services"
+                      >
                         <span className="hidden lg:block">
                           Information Technology
                         </span>
@@ -66,7 +82,10 @@ export default function Home() {
                       </button>
                     </Modal>
                     <Modal issue="other">
-                      <button className=" text-white py-2 px-3 font-bold bg-green-500 rounded flex-1">
+                      <button
+                        className=" text-white py-2 px-3 font-bold bg-green-500 rounded flex-1"
+                        aria-label="Learn more about More services"
+                      >
                         <span className="">Other</span>
                       </button>
                     </Modal>
@@ -77,6 +96,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+
       <Footer />
     </>
   );
