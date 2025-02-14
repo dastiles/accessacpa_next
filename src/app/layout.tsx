@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "Business Consulting",
     "Bookkeeping",
     "Financial Services",
+    "Thalenta Ncube",
   ],
   authors: [{ name: "Your Brand Name", url: "https://yourwebsite.com" }],
   robots: "index, follow",
